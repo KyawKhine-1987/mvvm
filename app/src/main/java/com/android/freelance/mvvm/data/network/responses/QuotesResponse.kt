@@ -4,7 +4,7 @@ import com.android.freelance.mvvm.data.db.entities.Quotes
 
 data class QuotesResponse (
 
-    //TODO: Create this attribute in table in MySQL and PHP.
+    //TODO: Create this attributes in the table which is used in backend MySQL and PHP.
     val isSuccessful: Boolean,
     val quotes: List<Quotes>
 )
