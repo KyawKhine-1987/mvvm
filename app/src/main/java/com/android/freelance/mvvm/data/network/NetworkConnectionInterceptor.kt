@@ -1,4 +1,4 @@
-package com.android.freelance.mvvm.data.network.responses
+package com.android.freelance.mvvm.data.network
 
 import android.content.Context
 import android.net.ConnectivityManager

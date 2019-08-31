@@ -38,11 +38,11 @@ class SignUpActivity : AppCompatActivity(), AuthListener , KodeinAware {
             R.layout.activity_signup
         )// That ActivityLoginBinding class is automatically generated.
 
-        val viewModel = ViewModelProviders.of(this, factory).get(AuthViewModel::class.java)
-        binding.viewmodel = viewModel
-        viewModel.authListener = this
+        val mSignUpViewModel = ViewModelProviders.of(this, factory).get(AuthViewModel::class.java)
+        binding.viewmodel = mSignUpViewModel
+        mSignUpViewModel.authListener = this
 
-        viewModel.getLoggedInUser().observe(this, Observer { user ->
+        mSignUpViewModel.getLoggedInUser().observe(this, Observer { user ->
             if (user != null) {
                 Intent(this, HomeActivity::class.java).also {
                     it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
