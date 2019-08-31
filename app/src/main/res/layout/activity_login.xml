@@ -78,7 +78,7 @@
                     android:background="@drawable/edit_text_round_gray_background"
                     android:drawableLeft="@drawable/ic_email"
                     android:drawablePadding="16dp"
-                    android:hint="edward@gmail.com"
+                    android:hint="edwardbro41@gmail.com"
                     android:inputType="textEmailAddress"
                     android:padding="12dp"
                     android:text="@={viewmodel.email}" />
@@ -101,7 +101,7 @@
                     android:layout_marginBottom="12dp"
                     android:text="Forget Password?"
                     android:fontFamily="Roboto"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/colorAccent" />
 
                 <Button
@@ -124,14 +124,14 @@
                 android:onClick="@{viewmodel::onTextSignUp}"
                 android:text="Don't have an account?\nSign Up Here"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:fontFamily="Roboto"
                 android:textColor="@color/colorAccent" />
 
         </RelativeLayout>
 
         <ProgressBar
-            android:id="@+id/progress_bar"
+            android:id="@+id/pbLogIn_Loading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center_vertical"
