@@ -14,6 +14,6 @@ interface UserDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsert(user: User): Long
 
-    @Query("select * from user nolock where id = $Current_UserId")
+    @Query("select * from user nolock where uid = $Current_UserId")
     fun getUser() : LiveData<User>
 }

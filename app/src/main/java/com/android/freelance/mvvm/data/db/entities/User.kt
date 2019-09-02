@@ -7,7 +7,7 @@ const val Current_UserId = 0
 
 @Entity
 data class User(
-    var userId: Int? = null,
+    var id: Int? = null,
     var name: String? = null,
     var email: String? = null,
     var school: String? = null,
@@ -15,5 +15,5 @@ data class User(
     var updated_at: String? = null
 ) {
     @PrimaryKey(autoGenerate = false)
-    var id: Int = Current_UserId
+    var uid: Int = Current_UserId
 }

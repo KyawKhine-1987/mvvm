@@ -4,7 +4,9 @@ import android.content.Context
 import android.net.ConnectivityManager
 import com.android.freelance.mvvm.util.NoInternetException
 import okhttp3.Interceptor
+import okhttp3.OkHttpClient
 import okhttp3.Response
+import okhttp3.logging.HttpLoggingInterceptor
 
 class NetworkConnectionInterceptor(
     context: Context

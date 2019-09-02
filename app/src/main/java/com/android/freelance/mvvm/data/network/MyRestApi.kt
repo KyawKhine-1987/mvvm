@@ -6,17 +6,17 @@ import okhttp3.OkHttpClient
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
-const val base_url = "http://192.168.42.143/myRestApiProject/public/"
+const val base_url = "http://192.168.42.154/myRestApiProject/public/"
 
 //const val url = "http://10.0.2.2/myRestApiProject/public/" it's working in emulator.
 //const val url = "http://simplifiedlabs.xyz/myApi/public/"
 interface MyRestApi {
 
+    /*@Headers(
+        "Accept: application/json", "Content-type:application/json"
+    )*/
     @FormUrlEncoded
     @POST("userlogin")
     suspend fun userLogIn(
@@ -56,7 +56,6 @@ interface MyRestApi {
             val okHttpClient = OkHttpClient.Builder()
                 .addInterceptor(networkConnectionInterceptor)
                 .build()
-
 
             return Retrofit.Builder()
                 .baseUrl(base_url)
