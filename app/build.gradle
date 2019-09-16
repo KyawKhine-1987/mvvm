@@ -45,8 +45,8 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
 
     //OkHttp Logging
-    def okhttp3_logging_version = '3.12.1'
-    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3_logging_version"
+    /*def okhttp3_logging_version = '3.12.1'
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3_logging_version"*/
 
     //Kotlin Coroutines
     def coroutines_version = '1.1.1'
@@ -54,11 +54,11 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
 
     // ViewModel and LiveData
-    def lifecycle_version = '2.0.0'
+    def lifecycle_version = '2.1.0'
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
 
     //New Material Design
-    implementation 'com.google.android.material:material:1.1.0-alpha09'
+    implementation 'com.google.android.material:material:1.1.0-alpha10'
 
     //Kodein Dependency Injection
     def kodein_version = '6.2.1'
@@ -66,13 +66,13 @@ dependencies {
     implementation "org.kodein.di:kodein-di-framework-android-x:$kodein_version"
 
     //Android Room
-    def room_version = '2.2.0-beta01'
+    def room_version = '2.2.0-rc01'
     implementation "androidx.room:room-runtime:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
 
     //Android Navigation Architecture
-    def navigation_version = '2.2.0-alpha01'
+    def navigation_version = '2.2.0-alpha02'
     implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
     implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
 
@@ -81,4 +81,7 @@ dependencies {
     implementation "com.xwray:groupie:$groupie_version"
     implementation "com.xwray:groupie-kotlin-android-extensions:$groupie_version"
     implementation "com.xwray:groupie-databinding:$groupie_version"
+
+    //preference
+    implementation "androidx.preference:preference-ktx:1.1.0"
 }

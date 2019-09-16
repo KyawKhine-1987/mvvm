@@ -62,7 +62,7 @@ class LogInActivity : AppCompatActivity(), AuthListener, KodeinAware {
     override fun onSuccess(user: User) {
         Log.i(LOG_TAG, "TEST : onSuccess() is called...")
 
-        pbLogIn_Loading.hide()
+            pbLogIn_Loading.hide()
         //root_layout.snackbar("${user.name} is Logged In.")
         /*toast("${user.name} is Logged In.")*/
     }
